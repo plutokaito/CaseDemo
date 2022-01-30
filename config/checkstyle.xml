@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+
+<!DOCTYPE module PUBLIC
+        "-//Checkstyle//DTD Checkstyle Configuration 1.2//EN"
+        "https://checkstyle.org/dtds/configuration_1_2.dtd">
+
+<module name="Checker">
+    <property name="charset" value="UTF-8"/>
+
+    <module name="Header">
+        <property name="fileExtensions" value="java"/>
+        <property name="headerFile" value="/checkstyle-header.txt"/>
+    </module>
+
+    <module name="TreeWalker">
+        <module name="PackageName">
+            <property name="format" value="io\.kaitoshy(\.[a-z][a-zA-Z0-9]+)*$"/>
+        </module>
+
+        <!-- imports -->
+        <module name="IllegalImport"/>
+        <module name="UnusedImports"/>
+        <module name="AvoidStarImport"/>
+
+    </module>
+</module>
