@@ -10,6 +10,7 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import java.util.HashMap;
 import java.util.Map;
 
+/*
 @SpringBootApplication
 public class SpringDataDemo implements CommandLineRunner {
     @Autowired
@@ -17,6 +18,7 @@ public class SpringDataDemo implements CommandLineRunner {
 
     @Autowired
     private TaskService service;
+
 
     public static void main(String[] args) {
         SpringApplication.run(SpringDataDemo.class, args);
@@ -34,12 +36,12 @@ public class SpringDataDemo implements CommandLineRunner {
         stringRedisTemplate.opsForHash().putAll("user_1", map);
         Map<Object, Object> getMap = stringRedisTemplate.opsForHash().entries("user_1");
         getMap.forEach((key, value) -> System.out.println("key:" + key + "value:" + value));
-        
-        for (int i = 0; i < 10; i++) {
-            service.add();
-            System.out.println("调用次数:" + service.get());
-        }
 
-        System.out.println(service.get());
+
+        for (int i = 0; i < 10; i++) {
+            System.out.println("调啊调:" + service.result());
+        }
     }
 }
+*/
+
