@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.AnnotatedBeanDefinition;
 import org.springframework.beans.factory.config.BeanDefinitionHolder;
 import org.springframework.beans.factory.support.AbstractBeanDefinition;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
+import org.springframework.context.annotation.AnnotatedBeanDefinitionReader;
 import org.springframework.context.annotation.ClassPathBeanDefinitionScanner;
 import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.core.env.Environment;
@@ -37,8 +38,15 @@ public class ClassPathMyComponentScanner extends ClassPathBeanDefinitionScanner 
 
     private void processBeanDefinitions(Set<BeanDefinitionHolder> beanDefinitions) {
         AbstractBeanDefinition definition;
+        BeanDefinitionRegistry registry = getRegistry();
         for (BeanDefinitionHolder holder: beanDefinitions) {
             System.out.println(">=====processBeanDefinitions:" + holder.getBeanName());
+            definition = (AbstractBeanDefinition) holder.getBeanDefinition();
+
+            System.out.println("=>>>>>" + definition.getBeanClassName());
+            definition.setBeanClass(MyComponentBeanFactory.class);
+
+            registry.registerBeanDefinition(holder.getBeanName(), holder.getBeanDefinition());
         }
     }
 
