@@ -25,8 +25,9 @@ public class DynamicProxy {
         System.out.println(video);*/
     }
 
+    @SuppressWarnings("unchecked")
     private static <T> T getServiceProxy(Class<T> clazz) {
-        return (T) Proxy.newProxyInstance(clazz.getClassLoader(),
+       return (T) Proxy.newProxyInstance(clazz.getClassLoader(),
                 new Class[]{clazz},
                 (proxy, method, args1) -> {
                     Annotation[] annotations = method.getDeclaredAnnotations();
