@@ -1,4 +1,4 @@
-package com.kaitoshy.annotation;
+package com.kaitoshy.core;
 
 import org.springframework.beans.factory.DisposableBean;
 

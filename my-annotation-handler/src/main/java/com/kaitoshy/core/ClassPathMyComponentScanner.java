@@ -1,14 +1,10 @@
-package com.kaitoshy.annotation;
+package com.kaitoshy.core;
 
 import org.springframework.beans.factory.annotation.AnnotatedBeanDefinition;
 import org.springframework.beans.factory.config.BeanDefinitionHolder;
 import org.springframework.beans.factory.support.AbstractBeanDefinition;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
-import org.springframework.context.annotation.AnnotatedBeanDefinitionReader;
 import org.springframework.context.annotation.ClassPathBeanDefinitionScanner;
-import org.springframework.context.annotation.ScopedProxyMode;
-import org.springframework.core.env.Environment;
-import org.springframework.core.io.ResourceLoader;
 
 import java.util.Set;
 

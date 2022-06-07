@@ -1,6 +1,6 @@
 package com.kaitoshy;
 
-import com.kaitoshy.annotation.ComponentScan;
+import com.kaitoshy.core.ComponentScan;
 import com.kaitoshy.service.EchoServer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;

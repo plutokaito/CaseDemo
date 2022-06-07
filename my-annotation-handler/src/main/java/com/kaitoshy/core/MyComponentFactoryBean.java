@@ -1,7 +1,6 @@
-package com.kaitoshy.annotation;
+package com.kaitoshy.core;
 
 import org.springframework.beans.factory.FactoryBean;
-import org.springframework.beans.factory.InitializingBean;
 
 public class MyComponentFactoryBean<T> implements FactoryBean<T> {
 

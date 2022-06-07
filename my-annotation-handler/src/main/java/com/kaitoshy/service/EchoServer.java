@@ -1,7 +1,7 @@
 package com.kaitoshy.service;
 
-import com.kaitoshy.annotation.DBCurd;
-import com.kaitoshy.annotation.MyComponent;
+import com.kaitoshy.core.DBCurd;
+import com.kaitoshy.core.MyComponent;
 
 @MyComponent
 public interface EchoServer {

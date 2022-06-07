@@ -1,15 +1,12 @@
-package com.kaitoshy.annotation;
+package com.kaitoshy.core;
 
 import java.lang.annotation.ElementType;
-import java.lang.annotation.Inherited;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
-@Inherited
-public @interface DBCurd {
-    String field();
-    String name();
+@Target(ElementType.METHOD)
+public @interface DbCurd {
+    DbCurdMethodEnum method();
 }

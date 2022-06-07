@@ -1,13 +1,15 @@
-package com.kaitoshy.annotation;
-
-import org.springframework.context.annotation.DependsOn;
+package com.kaitoshy.core;
 
 import java.lang.annotation.ElementType;
+import java.lang.annotation.Inherited;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@Target({ElementType.TYPE})
+@Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface MyComponent {
+@Inherited
+public @interface DBCurd {
+    String field();
+    String name();
 }
