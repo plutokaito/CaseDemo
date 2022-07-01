@@ -54,7 +54,7 @@ public class WebConfiguration {
         return args -> {
             System.out.println("当前 helloWorld 实现类为：" + beanFactory.getBean("helloWorld").getClass().getName());
 
-            System.out.println("当前 WebConfiguration 实现类为：" + beanFactory.getBean("webConfiguration").getClass().getName());
+            System.out.println("当前 WebConfiguration 实现类为：" + beanFactory.getBean(WebConfiguration.class).getClass().getName());
         };
     }
 }
